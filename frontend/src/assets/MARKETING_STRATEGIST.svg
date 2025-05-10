@@ -1,0 +1,201 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Animated gradient background -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7">
+        <animate attributeName="stop-color" 
+          values="#a855f7; #9333ea; #a855f7"
+          dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#9333ea">
+        <animate attributeName="stop-color"
+          values="#9333ea; #a855f7; #9333ea"
+          dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- Filter for glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Circle with subtle pulse -->
+  <circle cx="100" cy="100" r="95" fill="url(#grad1)">
+    <animate attributeName="r" 
+      values="95;93;95" 
+      dur="2s"
+      repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Animated Target Icon -->
+  <circle cx="100" cy="90" r="30" 
+    fill="none" 
+    stroke="#ffffff" 
+    stroke-width="3" 
+    opacity="0.9"
+    filter="url(#glow)">
+    <animate attributeName="r"
+      values="30;31;30"
+      dur="2s"
+      repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="90" r="20" 
+    fill="none" 
+    stroke="#ffffff" 
+    stroke-width="3" 
+    opacity="0.9"
+    filter="url(#glow)">
+    <animate attributeName="r"
+      values="20;21;20"
+      dur="2s"
+      repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="90" r="10" 
+    fill="#ffffff" 
+    opacity="0.9"
+    filter="url(#glow)">
+    <animate attributeName="r"
+      values="10;11;10"
+      dur="2s"
+      repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Animated Growth Arrow -->
+  <path d="M60 130 L80 110 L80 120 L100 100 L100 110 L120 90"
+    stroke="#60a5fa"
+    stroke-width="4"
+    stroke-linecap="round"
+    fill="none"
+    filter="url(#glow)">
+    <animate attributeName="stroke-width"
+      values="4;5;4"
+      dur="1.5s"
+      repeatCount="indefinite"/>
+  </path>
+
+  <!-- Animated Megaphone -->
+  <path d="M140 70 L150 65 L150 95 L140 90 Z" 
+    fill="#ffffff" 
+    opacity="0.9"
+    filter="url(#glow)">
+    <animate attributeName="transform"
+      attributeType="XML"
+      type="translate"
+      values="0,0; 1,-1; 0,0"
+      dur="0.5s"
+      repeatCount="indefinite"/>
+  </path>
+  <path d="M130 73 L140 70 L140 90 L130 87 Z" 
+    fill="#60a5fa" 
+    opacity="0.9"
+    filter="url(#glow)">
+    <animate attributeName="transform"
+      attributeType="XML"
+      type="translate"
+      values="0,0; 1,-1; 0,0"
+      dur="0.5s"
+      repeatCount="indefinite"/>
+  </path>
+  <path d="M110 80 L130 73 L130 87 L110 80 Z" 
+    fill="#ffffff" 
+    opacity="0.9"
+    filter="url(#glow)">
+    <animate attributeName="transform"
+      attributeType="XML"
+      type="translate"
+      values="0,0; 1,-1; 0,0"
+      dur="0.5s"
+      repeatCount="indefinite"/>
+  </path>
+
+  <!-- Animated Strategy Dots -->
+  <circle cx="70" cy="70" r="4" 
+    fill="#ffffff" 
+    opacity="0.9"
+    filter="url(#glow)">
+    <animate attributeName="r"
+      values="4;5;4"
+      dur="1s"
+      repeatCount="indefinite"/>
+  </circle>
+  <circle cx="85" cy="65" r="4" 
+    fill="#ffffff" 
+    opacity="0.9"
+    filter="url(#glow)">
+    <animate attributeName="r"
+      values="4;5;4"
+      dur="1s"
+      repeatCount="indefinite"
+      begin="0.3s"/>
+  </circle>
+  <circle cx="100" cy="60" r="4" 
+    fill="#ffffff" 
+    opacity="0.9"
+    filter="url(#glow)">
+    <animate attributeName="r"
+      values="4;5;4"
+      dur="1s"
+      repeatCount="indefinite"
+      begin="0.6s"/>
+  </circle>
+  
+  <path d="M70 70 L85 65 L100 60"
+    stroke="#ffffff"
+    stroke-width="2"
+    stroke-dasharray="2,2"
+    opacity="0.9"
+    filter="url(#glow)"/>
+
+  <!-- Animated Bar Chart -->
+  <rect x="60" y="140" width="10" height="15" 
+    fill="#60a5fa" 
+    opacity="0.9"
+    filter="url(#glow)">
+    <animate attributeName="height"
+      values="15;17;15"
+      dur="1.5s"
+      repeatCount="indefinite"/>
+  </rect>
+  <rect x="80" y="135" width="10" height="20" 
+    fill="#60a5fa" 
+    opacity="0.9"
+    filter="url(#glow)">
+    <animate attributeName="height"
+      values="20;22;20"
+      dur="1.5s"
+      repeatCount="indefinite"
+      begin="0.5s"/>
+  </rect>
+  <rect x="100" y="130" width="10" height="25" 
+    fill="#60a5fa" 
+    opacity="0.9"
+    filter="url(#glow)">
+    <animate attributeName="height"
+      values="25;27;25"
+      dur="1.5s"
+      repeatCount="indefinite"
+      begin="1s"/>
+  </rect>
+
+  <!-- Text Path -->
+  <path id="textPath"
+    d="M40,100 A60,60 0 1,1 160,100 A60,60 0 1,1 40,100"
+    fill="none"/>
+
+  <!-- Stylized Text -->
+  <text>
+    <textPath href="#textPath" startOffset="50%" text-anchor="middle"
+      fill="#ffffff" 
+      font-family="Arial" 
+      font-weight="bold"
+      font-size="14"
+      letter-spacing="1">
+      MARKETING STRATEGIST
+    </textPath>
+  </text>
+</svg>

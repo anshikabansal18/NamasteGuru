@@ -1,0 +1,128 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cyberpunk-inspired gradient background -->
+  <defs>
+    <linearGradient id="cyberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1A2E"/>
+      <stop offset="50%" style="stop-color:#16213E"/>
+      <stop offset="100%" style="stop-color:#0F3460"/>
+    </linearGradient>
+    
+    <!-- Glowing effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Grid pattern -->
+    <pattern id="grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#4A90E2" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background with grid -->
+  <circle cx="100" cy="100" r="95" fill="url(#cyberGrad)"/>
+  <circle cx="100" cy="100" r="95" fill="url(#grid)"/>
+
+  <!-- Animated CPU Pattern -->
+  <rect x="70" y="70" width="60" height="60" fill="none" stroke="#00FFF5" stroke-width="2" filter="url(#glow)">
+    <animate attributeName="stroke-dasharray" values="0,240;240,240" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="80" y="80" width="40" height="40" fill="none" stroke="#00FFF5" stroke-width="2" filter="url(#glow)">
+    <animate attributeName="stroke-dasharray" values="240,240;0,240" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Dynamic Circuit Lines -->
+  <g stroke="#00FFF5" stroke-width="2" filter="url(#glow)">
+    <path d="M70 90 H60">
+      <animate attributeName="stroke-dashoffset" values="0;30" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M70 110 H60">
+      <animate attributeName="stroke-dashoffset" values="30;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M130 90 H140">
+      <animate attributeName="stroke-dashoffset" values="0;30" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M130 110 H140">
+      <animate attributeName="stroke-dashoffset" values="30;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M90 70 V60">
+      <animate attributeName="stroke-dashoffset" values="0;30" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M110 70 V60">
+      <animate attributeName="stroke-dashoffset" values="30;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M90 130 V140">
+      <animate attributeName="stroke-dashoffset" values="0;30" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M110 130 V140">
+      <animate attributeName="stroke-dashoffset" values="30;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Pulsing Connection Points -->
+  <g fill="#FF0057" filter="url(#glow)">
+    <circle cx="60" cy="90" r="3">
+      <animate attributeName="r" values="2;4;2" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="110" r="3">
+      <animate attributeName="r" values="4;2;4" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="140" cy="90" r="3">
+      <animate attributeName="r" values="2;4;2" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="140" cy="110" r="3">
+      <animate attributeName="r" values="4;2;4" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="90" cy="60" r="3">
+      <animate attributeName="r" values="2;4;2" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="110" cy="60" r="3">
+      <animate attributeName="r" values="4;2;4" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="90" cy="140" r="3">
+      <animate attributeName="r" values="2;4;2" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="110" cy="140" r="3">
+      <animate attributeName="r" values="4;2;4" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Futuristic Center Icon -->
+  <g filter="url(#glow)">
+    <path d="M90 90 L110 90 L110 110 L90 110 Z" fill="#00FFF5" opacity="0.5"/>
+    <circle cx="100" cy="100" r="8" fill="#00FFF5">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="100" r="4" fill="#FF0057">
+      <animate attributeName="r" values="3;5;3" dur="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Dynamic Data Flow -->
+  <path d="M40 120 Q70 140 100 120 Q130 100 160 120"
+        fill="none"
+        stroke="#00FFF5"
+        stroke-width="2"
+        filter="url(#glow)">
+    <animate attributeName="d" 
+             values="M40 120 Q70 140 100 120 Q130 100 160 120;
+                     M40 110 Q70 130 100 110 Q130 90 160 110;
+                     M40 120 Q70 140 100 120 Q130 100 160 120"
+             dur="4s"
+             repeatCount="indefinite"/>
+  </path>
+
+  <!-- Tech Expert Text with glow -->
+  <path id="textPath"
+        d="M40,100 A60,60 0 1,1 160,100 A60,60 0 1,1 40,100"
+        fill="none"/>
+  <text filter="url(#glow)">
+    <textPath href="#textPath" startOffset="50%" text-anchor="middle"
+              fill="#00FFF5" font-family="Arial" font-weight="bold" font-size="14">
+      ⚡ TECHNOLOGY EXPERT ⚡
+    </textPath>
+  </text>
+</svg>

@@ -1,0 +1,103 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Animated gradient background -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899">
+        <animate attributeName="stop-color" 
+          values="#ec4899; #f43f5e; #ec4899"
+          dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#f43f5e">
+        <animate attributeName="stop-color"
+          values="#f43f5e; #ec4899; #f43f5e"
+          dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- Filter for glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Circle with subtle pulse -->
+  <circle cx="100" cy="100" r="95" fill="url(#grad1)">
+    <animate attributeName="r" 
+      values="95;93;95" 
+      dur="2s"
+      repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Animated Lightbulb -->
+  <path d="M90 85 C90 65, 110 65, 110 85 C110 95, 105 100, 105 105 L95 105 C95 100, 90 95, 90 85"
+    fill="#ffffff" 
+    opacity="0.9"
+    filter="url(#glow)">
+    <animate attributeName="opacity"
+      values="0.9;1;0.9"
+      dur="1s"
+      repeatCount="indefinite"/>
+  </path>
+  <rect x="95" y="105" width="10" height="15" 
+    fill="#ffffff" 
+    opacity="0.9"
+    filter="url(#glow)"/>
+
+  <!-- Animated Rocket -->
+  <path d="M120 120 L140 100 L130 90 L110 110 Z" 
+    fill="#ffffff" 
+    opacity="0.9"
+    filter="url(#glow)">
+    <animate attributeName="transform"
+      attributeType="XML"
+      type="translate"
+      values="0,0; -2,-2; 0,0"
+      dur="1.5s"
+      repeatCount="indefinite"/>
+  </path>
+  <circle cx="125" cy="105" r="3" 
+    fill="#60a5fa" 
+    filter="url(#glow)"/>
+
+  <!-- Animated Charts -->
+  <path d="M60 110 L70 90 L80 100 L90 80"
+    stroke="#60a5fa"
+    stroke-width="4"
+    stroke-linecap="round"
+    fill="none"
+    filter="url(#glow)">
+    <animate attributeName="stroke-width"
+      values="4;6;4"
+      dur="2s"
+      repeatCount="indefinite"/>
+  </path>
+
+  <!-- Modern Person Silhouette -->
+  <circle cx="100" cy="60" r="12" 
+    fill="#60a5fa" 
+    filter="url(#glow)"/>
+  <path d="M85 130 C85 100, 115 100, 115 130" 
+    fill="#60a5fa" 
+    filter="url(#glow)"/>
+
+  <!-- Dynamic Text Path -->
+  <path id="textPath"
+    d="M40,100 A60,60 0 1,1 160,100 A60,60 0 1,1 40,100"
+    fill="none"/>
+
+  <!-- Stylized Text -->
+  <text>
+    <textPath href="#textPath" startOffset="50%" text-anchor="middle"
+      fill="#ffffff" 
+      font-family="Arial" 
+      font-weight="bold"
+      font-size="16"
+      letter-spacing="2">
+      STARTUP MENTOR
+    </textPath>
+  </text>
+</svg>

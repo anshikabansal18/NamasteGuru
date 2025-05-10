@@ -1,0 +1,80 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Animated gradient background -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1">
+        <animate attributeName="stop-color" 
+          values="#6366f1; #8b5cf6; #6366f1"
+          dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#8b5cf6">
+        <animate attributeName="stop-color"
+          values="#8b5cf6; #6366f1; #8b5cf6"
+          dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- Filter for glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Circle with subtle pulse -->
+  <circle cx="100" cy="100" r="95" fill="url(#grad1)">
+    <animate attributeName="r" 
+      values="95;93;95" 
+      dur="2s"
+      repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Stylized Briefcase -->
+  <path d="M80 85 h40 v-15 c0,-5 -8,-5 -20,-5 c-12,0 -20,0 -20,5 v15" 
+    fill="#ffffff" 
+    opacity="0.9"
+    filter="url(#glow)"/>
+  <rect x="55" y="85" width="90" height="60" rx="10" 
+    fill="#ffffff" 
+    opacity="0.9"
+    filter="url(#glow)"/>
+
+  <!-- Animated Growth Arrow -->
+  <path d="M85 115 L115 85 L115 100 L145 70"
+    stroke="#4ade80"
+    stroke-width="6"
+    stroke-linecap="round"
+    fill="none"
+    filter="url(#glow)">
+    <animate attributeName="stroke-width"
+      values="6;8;6"
+      dur="1.5s"
+      repeatCount="indefinite"/>
+  </path>
+
+  <!-- Modern Person Silhouette -->
+  <circle cx="100" cy="60" r="12" fill="#4ade80" filter="url(#glow)"/>
+  <path d="M85 130 C85 100, 115 100, 115 130" 
+    fill="#4ade80" 
+    filter="url(#glow)"/>
+
+  <!-- Dynamic Text Path -->
+  <path id="textPath"
+    d="M40,100 A60,60 0 1,1 160,100 A60,60 0 1,1 40,100"
+    fill="none"/>
+
+  <!-- Stylized Text -->
+  <text>
+    <textPath href="#textPath" startOffset="50%" text-anchor="middle"
+      fill="#ffffff" 
+      font-family="Arial" 
+      font-weight="bold"
+      font-size="16"
+      letter-spacing="2">
+      CAREER COACH
+    </textPath>
+  </text>
+</svg>
