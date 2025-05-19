@@ -13,15 +13,15 @@ Authentication: JWT (JSON Web Tokens)
 
 🖼️ Screenshots
 
-Home Page
+![image](https://github.com/user-attachments/assets/64e07208-3857-4d63-8928-8d82f9239b0f)
 
-Mentor Profile
+![image](https://github.com/user-attachments/assets/3e674674-a9d8-40b6-9ca9-642957b0ec71)
 
-Booking Dashboard
+![image](https://github.com/user-attachments/assets/1651add5-3c27-4215-8f3f-29915efcf6ec)
 
-Chat Interface
+![image](https://github.com/user-attachments/assets/c1486239-2bb3-4aed-8387-498fa72d9440)
 
-Admin Panel
+![image](https://github.com/user-attachments/assets/ab3bd304-16ba-4d64-a5c9-0c296191295f)
 
 🧭 Usage Instructions (User Roles)
 
