@@ -46,7 +46,10 @@ Conduct sessions via chat/video
 Submit feedback and monitor mentee progress
 
 🔹 Admin
+
 Approve mentor registrations
+
 Manage users and monitor session activity
+
 Generate reports and handle platform issues
 
