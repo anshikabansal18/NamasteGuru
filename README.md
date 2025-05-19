@@ -7,8 +7,11 @@ Namaste Guru is a full-stack web platform built to connect mentees with mentors 
 🛠️ Tech Stack
 
 Frontend: React.js, Tailwind CSS, Redux Toolkit
+
 Backend: Node.js, Express.js
+
 Database: MongoDB (NoSQL)
+
 Authentication: JWT (JSON Web Tokens)
 
 🖼️ Screenshots
