@@ -26,15 +26,23 @@ Admin Panel
 🧭 Usage Instructions (User Roles)
 
 🔹 Mentee
+
 Register & complete profile
+
 Search mentors based on domain, availability, rating
+
 Book session, chat, and receive guidance
+
 Track your mentorship journey via dashboard
 
 🔹 Mentor
+
 Register & provide expertise, availability
+
 View and manage incoming session requests
+
 Conduct sessions via chat/video
+
 Submit feedback and monitor mentee progress
 
 🔹 Admin
